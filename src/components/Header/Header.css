@@ -1,0 +1,54 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 25px;
+  align-items: center;
+  background-color: #c9c4c0;
+}
+
+.logo {
+  width: 48px;
+}
+
+.header__link {
+  font-size: 20px;
+  color: #0c478b;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .header {
+    padding-top: 25px;
+  }
+
+  .header__link {
+    font-size: 26px;
+  }
+
+  .logo {
+    width: 64px;
+  }
+  
+  .cart-image {
+    width: 48px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header__link {
+    font-size: 30px;
+    transition: opacity .3s;
+  }
+
+  .header__link:hover {
+    opacity: .7;
+  }
+
+  .logo {
+    width: 72px;
+  }
+  
+  .cart-image {
+    width: 54px;
+  }
+}
