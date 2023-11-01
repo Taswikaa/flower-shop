@@ -1,0 +1,51 @@
+.info {
+  width: 282px;
+  margin: 0 auto;
+  padding: 15px 5px;
+  background-color: #DDD0C8;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+}
+
+.info__text {
+  font-size: 18px;
+}
+
+.info__text a {
+  text-decoration: none;
+  color: #4274e1;
+}
+
+@media (min-width: 768px) {
+  .info {
+    width: 665px;
+  }
+
+  .info__text {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .info {
+    width: 1010px;
+  }
+
+  .info__text {
+    font-size: 28px;
+  }
+}
+
+@media screen {
+  .info__text a {
+    transition: opacity .3s;
+  }
+
+  .info__text a:hover {
+    opacity: .7;
+    cursor: pointer;
+  }
+}

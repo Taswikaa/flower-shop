@@ -13,6 +13,7 @@
 .card__name {
   max-width: 262px;
   text-align: center;
+  min-height: 60px;
 }
 
 .card__img {

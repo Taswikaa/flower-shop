@@ -32,9 +32,9 @@
 }
 
 .detail__link {
-  text-align: center;
   font-size: 18px;
-  text-decoration: none;
+  background-color: transparent;
+  border: none;
   color: #1a5b82;
 }
 
@@ -70,5 +70,16 @@
   .detail__link {
     margin-top: 40px;
     font-size: 26px;
+  }
+}
+
+@media screen {
+  .detail__link {
+    transition: opacity .3s;
+  }
+
+  .detail__link:hover {
+    cursor: pointer;
+    opacity: .7;
   }
 }

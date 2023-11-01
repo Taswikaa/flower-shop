@@ -1,9 +1,9 @@
 import { Route, Routes } from 'react-router-dom';
 import Cards from '../Cards/Cards';
 import Header from '../Header/Header';
-import SearchForm from '../SearchForm/SearchForm';
 import './App.css';
 import Detail from '../Detail/Detail';
+import Info from '../SearchForm/Info';
 
 const App = () => {
   return (
@@ -13,7 +13,7 @@ const App = () => {
           <Route path='/' element={(
             <>
               <Header></Header>
-              <SearchForm></SearchForm>
+              <Info></Info>
               <Cards></Cards>
             </>
           )} />

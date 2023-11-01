@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './Detail.css';
 
 const Detail = () => {
@@ -15,7 +15,7 @@ const Detail = () => {
             <img className='detail__img' src={src} alt="" />
             <p className='detail__text'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum aliquid accusamus voluptatem ipsam sunt mollitia dolore odio, sit cum quam veritatis atque, praesentium perferendis voluptate similique corrupti. Asperiores eaque dolor nisi iste laboriosam, quibusdam facere quo? Explicabo adipisci corrupti facilis reprehenderit? Ad suscipit itaque quasi repudiandae quia corrupti consectetur eaque molestiae corporis accusantium labore pariatur fuga, et sint minus. Quisquam saepe eligendi vel blanditiis debitis. Veniam quasi sint vitae soluta.</p>
           </div>
-          <Link className='detail__link' href="" onClick={() => navigate(-1)}>Назад</Link>
+          <button className='detail__link' onClick={() => navigate(-1)}>Назад</button>
         </div>
       </div>
     </div>
