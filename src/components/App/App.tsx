@@ -1,17 +1,28 @@
+import { Route, Routes } from 'react-router-dom';
 import Cards from '../Cards/Cards';
-import Detail from '../Detail/Detail';
 import Header from '../Header/Header';
 import SearchForm from '../SearchForm/SearchForm';
 import './App.css';
+import Detail from '../Detail/Detail';
 
 const App = () => {
   return (
     <div className='app'>
       <div className='content'>
-        {/* <Header></Header>
-        <SearchForm></SearchForm>
-        <Cards></Cards> */}
-        <Detail></Detail>
+        <Routes>
+          <Route path='/' element={(
+            <>
+              <Header></Header>
+              <SearchForm></SearchForm>
+              <Cards></Cards>
+            </>
+          )} />
+          <Route path='/detail' element={(
+            <>
+              <Detail></Detail>
+            </>
+          )} />
+        </Routes>
       </div>
     </div>
   )

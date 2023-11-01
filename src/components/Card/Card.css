@@ -22,13 +22,14 @@
   border-radius: 5px;
 }
 
-.card__add {
+.card__view {
   padding: 5px 10px;
   font-size: 18px;
   background-color: #DDD0C8;
   color: #252525;
   border: none;
   border-radius: 5px;
+  text-decoration: none;
 }
 
 @media screen {
