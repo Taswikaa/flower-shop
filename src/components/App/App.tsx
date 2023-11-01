@@ -1,4 +1,5 @@
 import Cards from '../Cards/Cards';
+import Detail from '../Detail/Detail';
 import Header from '../Header/Header';
 import SearchForm from '../SearchForm/SearchForm';
 import './App.css';
@@ -7,9 +8,10 @@ const App = () => {
   return (
     <div className='app'>
       <div className='content'>
-        <Header></Header>
+        {/* <Header></Header>
         <SearchForm></SearchForm>
-        <Cards></Cards>
+        <Cards></Cards> */}
+        <Detail></Detail>
       </div>
     </div>
   )
