@@ -1,25 +1,29 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import Card from '../Card/Card';
 import './Cards.css';
+import { useAppDispatch, useAppSelector } from '../../hooks/redux';
+import { fetchCards } from '../../store/reducers/ActionCreator';
 
 const Cards = () => {
-  const [cards, setCards] = useState([]);
+  const dispatch = useAppDispatch();
+  const data = useAppSelector(s => s.cardReducer);
 
   useEffect(() => {
-    fetch('/data/data.json')
-    .then(data => data.json())
-    .then(res => setCards(res.flowers))
-  }, [])
+    dispatch(fetchCards())
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])  
 
   return (
     <ul className='card-list'>
+      {data.isLoading && 'Загрузка карточек...'}
       {
-        cards.map(el => {
+        data.cards.map(el => {
           return <Card key={el.id} title={el.title} src={el.src} />
         })
       }
+      {data.error && `Произошла ошибка: ${data.error}`}
     </ul>
   )
 }
 
-export default Cards
+export default Cards;
