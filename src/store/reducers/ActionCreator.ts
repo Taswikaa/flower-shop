@@ -2,7 +2,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 
 export const fetchCards = createAsyncThunk(
   'fetchCards',
-  async (_, thunkApi) => {
+  (_, thunkApi) => {
     try {
       return fetch('./data/data.json')
       .then(res => res.json())

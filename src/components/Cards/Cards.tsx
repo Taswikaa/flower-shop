@@ -18,7 +18,7 @@ const Cards = () => {
       {data.isLoading && 'Загрузка карточек...'}
       {
         data.cards.map(el => {
-          return <Card key={el.id} title={el.title} src={el.src} />
+          return <Card key={el.id} title={el.title} src={el.src} detail={el.detail} />
         })
       }
       {data.error && `Произошла ошибка: ${data.error}`}

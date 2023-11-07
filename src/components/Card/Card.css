@@ -34,11 +34,11 @@
 }
 
 @media screen {
-  .card__add {
+  .card__view {
     transition: opacity .3s;
   }
 
-  .card__add:hover {
+  .card__view:hover {
     cursor: pointer;
     opacity: .7;
   }

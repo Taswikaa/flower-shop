@@ -15,7 +15,7 @@ const initialState: CardState = {
 }
  
 export const cardSlice = createSlice({
-  name: 'user',
+  name: 'card',
   initialState: initialState,
   reducers: {},
   extraReducers: {

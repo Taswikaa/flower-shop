@@ -4,8 +4,11 @@ import Header from '../Header/Header';
 import './App.css';
 import Detail from '../Detail/Detail';
 import Info from '../SearchForm/Info';
+import { useAppSelector } from '../../hooks/redux';
 
 const App = () => {
+  const { title, src, detail } = useAppSelector(s => s.detailCardReducer);
+
   return (
     <div className='app'>
       <div className='content'>
@@ -19,7 +22,7 @@ const App = () => {
           )} />
           <Route path='/detail' element={(
             <>
-              <Detail></Detail>
+              <Detail title={title} src={src} detail={detail} ></Detail>
             </>
           )} />
         </Routes>
